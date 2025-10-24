@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Substitua 'nome-do-repositorio' pelo nome exato do seu repositório no GitHub
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/ecovibe.io/',
-})
+  optimizeDeps: {
+    exclude: ['lucide-react'],
+  },
+});
